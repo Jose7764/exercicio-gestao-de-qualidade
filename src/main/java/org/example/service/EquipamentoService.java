@@ -2,8 +2,10 @@ package org.example.service;
 
 import org.example.model.Equipamento;
 
-public interface EquipamentoService {
-    Equipamento criarEquipamento(Equipamento equipamento);
+import java.sql.SQLException;
 
-    Equipamento buscarEquipamentoporId(long id);
+public interface EquipamentoService {
+    Equipamento criarEquipamento(Equipamento equipamento) throws SQLException;
+
+    Equipamento buscarEquipamentoporId(int id);
 }

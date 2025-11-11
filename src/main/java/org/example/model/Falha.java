@@ -1,26 +1,42 @@
 package org.example.model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Falha {
 
     private int id;
     private int equipamentoId;
-    private Date dataHoraOcorrencia;
-    private String descircao;
+    private LocalDateTime dataHoraOcorrencia;
+    private String descricao;
     private String criticidade;
     private String status;
     private double tempoParadaHoras;
 
-    public Falha(int id, int equipamentoId, Date dataHoraOcorrencia, String descircao, String criticidade, String status, double tempoParadaHoras) {
-        this.id = id;
+
+    public Falha() {
+    }
+
+
+    public Falha(int equipamentoId, LocalDateTime dataHoraOcorrencia, String descricao, String criticidade, String status, double tempoParadaHoras) {
         this.equipamentoId = equipamentoId;
         this.dataHoraOcorrencia = dataHoraOcorrencia;
-        this.descircao = descircao;
+        this.descricao = descricao;
         this.criticidade = criticidade;
         this.status = status;
         this.tempoParadaHoras = tempoParadaHoras;
     }
+
+
+    public Falha(int id, int equipamentoId, LocalDateTime dataHoraOcorrencia, String descricao, String criticidade, String status, double tempoParadaHoras) {
+        this.id = id;
+        this.equipamentoId = equipamentoId;
+        this.dataHoraOcorrencia = dataHoraOcorrencia;
+        this.descricao = descricao;
+        this.criticidade = criticidade;
+        this.status = status;
+        this.tempoParadaHoras = tempoParadaHoras;
+    }
+
 
     public int getId() {
         return id;
@@ -38,20 +54,20 @@ public class Falha {
         this.equipamentoId = equipamentoId;
     }
 
-    public Date getDataHoraOcorrencia() {
+    public LocalDateTime getDataHoraOcorrencia() {
         return dataHoraOcorrencia;
     }
 
-    public void setDataHoraOcorrencia(Date dataHoraOcorrencia) {
+    public void setDataHoraOcorrencia(LocalDateTime dataHoraOcorrencia) {
         this.dataHoraOcorrencia = dataHoraOcorrencia;
     }
 
-    public String getDescircao() {
-        return descircao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescircao(String descircao) {
-        this.descircao = descircao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getCriticidade() {
@@ -76,5 +92,18 @@ public class Falha {
 
     public void setTempoParadaHoras(double tempoParadaHoras) {
         this.tempoParadaHoras = tempoParadaHoras;
+    }
+
+    @Override
+    public String toString() {
+        return "Falha{" +
+                "id=" + id +
+                ", equipamentoId=" + equipamentoId +
+                ", dataHoraOcorrencia=" + dataHoraOcorrencia +
+                ", descricao='" + descricao + '\'' +
+                ", criticidade='" + criticidade + '\'' +
+                ", status='" + status + '\'' +
+                ", tempoParadaHoras=" + tempoParadaHoras +
+                '}';
     }
 }
