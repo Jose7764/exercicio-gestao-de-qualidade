@@ -5,7 +5,7 @@ import org.example.model.Falha;
 import java.sql.SQLException;
 
 public interface FalhaRepository {
-    Falha registrarNovaFalha() throws SQLException;
+    Falha registrarNovaFalha(Falha falha) throws SQLException;
 
     Falha buscarFalhasCriticasAbertas() throws SQLException;
 }

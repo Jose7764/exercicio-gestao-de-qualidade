@@ -11,7 +11,7 @@ public class EquipamentoRepositoryImpl implements EquipamentoRepository {
     public Equipamento cadastrarEquipamento (Equipamento equipamento)throws SQLException {
 
         String query = """
-                INSERT INTO equipamento
+                INSERT INTO Equipamento
                 (nome, numeroDeSerie, areaSetor, statusOperacional)
                 VALUES (?,?,?,?)
                 """;
