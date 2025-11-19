@@ -7,5 +7,5 @@ import java.sql.SQLException;
 public interface EquipamentoService {
     Equipamento criarEquipamento(Equipamento equipamento) throws SQLException;
 
-    Equipamento buscarEquipamentoporId(int id);
+    Equipamento buscarEquipamentoporId(int id) throws SQLException;
 }

@@ -1,5 +1,6 @@
 package org.example.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class AcaoCorretiva {
@@ -18,6 +19,9 @@ public class AcaoCorretiva {
         this.dataHoraFim = dataHoraFim;
         this.responsavel = responsavel;
         this.descricaoAcao = descricaoAcao;
+    }
+
+    public AcaoCorretiva(Long falhaId, LocalDateTime now, LocalDateTime now1, String tecnicoX, String trocaDePeça) {
     }
 
     public int getId() {

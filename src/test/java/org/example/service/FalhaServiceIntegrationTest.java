@@ -124,7 +124,7 @@ public class FalhaServiceIntegrationTest {
     @DisplayName("Deve lançar exceção ao tentar registrar falha em equipamento inexistente")
     void testRegistrarFalha_EquipamentoInvalido() {
         Falha f = new Falha(999, LocalDateTime.now(), "Falha misteriosa", "BAIXA", "ABERTA", 0);
-        assertThrows(RuntimeException.class, () -> falhaService.registrarNovaFalha(f));
+         assertThrows(RuntimeException.class, () -> falhaService.registrarNovaFalha(f));
     }
 
     @Test

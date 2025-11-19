@@ -19,8 +19,10 @@ public class EquipamentoServiceImpl implements EquipamentoService {
     }
 
     @Override
-    public Equipamento buscarEquipamentoporId(int id){
-        return null;
+    public Equipamento buscarEquipamentoporId(int id) throws SQLException {
+
+
+        return repository.buscarEquipamentoPorId(id);
     }
 
 }

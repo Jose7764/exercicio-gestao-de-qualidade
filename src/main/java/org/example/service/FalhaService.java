@@ -8,5 +8,5 @@ import java.util.List;
 public interface FalhaService {
     Falha registrarNovaFalha(Falha falha) throws SQLException;
 
-    List<Falha> buscarFalhasCriticasAbertas();
+    List<Falha> buscarFalhasCriticasAbertas() throws SQLException;
 }
